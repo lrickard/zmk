@@ -1,0 +1,35 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#define DEFAU 0
+#define LOWER 1
+#define RAISE 2
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+    &kp TAB    &kp C    &kp L    &kp M     &kp H               &kp SPACE &kp E               &kp O     &kp Y     &kp G     &kp COMMA &kp BSPC
+    &kp ESC    &kp D    &kp R    &kp T     &kp N     &kp B     &kp LSHFT &kp RALT  &kp APOS  &kp A     &kp I     &kp S     &kp U     &kp RET
+    &kp LCTRL  &kp W    &kp J    &kp K     &kp F     &kp P     &to LOWER &to RAISE &kp X     &kp DOT   &kp Q     &kp Z     &kp V     &kp DEL
+            >;
+         };
+
+        lower_layer {
+            bindings = <
+    &kp TAB   &kp F1   &kp F2    &kp F3    &kp F4              &kp SPACE &kp DOT              &kp F7    &kp F8    &kp F9    &kp F10   &kp BSPC
+    &kp ESC   &kp N1   &kp N2    &kp N3    &kp N4    &kp F5    &kp LSHFT &kp ESC   &kp F6     &kp N7    &kp N8    &kp N9    &kp N0    &kp RET
+    &kp LCTRL &kp STAR &kp FSLH  &kp MINUS &kp EQUAL &kp N5    &to DEFAU &to RAISE &kp N6     &kp DOT   &kp COMMA &kp F11   &kp F12   &kp DEL
+            >;
+        };
+
+        raise_layer {
+            bindings = <
+    &kp TAB    &kp SEMI  &kp COLON &kp LBKT  &kp RBKT             &kp SPACE &kp RBRC            &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &kp BSPC
+    &kp ESC    &kp EXCL  &kp AT    &kp POUND &kp DLLR   &kp GRAVE &kp LSHFT &kp LBRC  &kp PIPE  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp RET
+    &kp LCTRL  &kp BSLH  &kp FSLH  &kp MINUS &kp EQUAL  &kp PRCNT &to DEFAU &to LOWER &kp CARET &kp DOT   &kp COMMA &kp LT    &kp GT    &kp DEL
+            >;
+        };
+    };
+};

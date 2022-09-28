@@ -1,0 +1,11 @@
+file_format: "1"
+id: lkplergo
+name: Lkplergo
+type: shield
+url: 
+requires: [nice_nano_v2]
+features:
+  - keys
+siblings:
+  - lkplergo_left
+  - lkplergo_right

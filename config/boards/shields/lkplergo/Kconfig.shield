@@ -1,0 +1,5 @@
+config SHIELD_LKPLERGO_LEFT
+    def_bool $(shields_list_contains,lkplergo_left)
+
+config SHIELD_LKPLERGO_RIGHT
+    def_bool $(shields_list_contains,lkplergo_right)
